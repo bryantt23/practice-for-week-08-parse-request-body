@@ -1,13 +1,15 @@
 function firstStep(input) {
   // Your code here
+  return input.split('&');
 }
 
 function secondStep(input) {
   // Your code here
+  return input.map(elem => elem.split('='));
 }
 
 function thirdStep(input) {
-  // Your code here
+  return input.map(arr => arr.map(elem => elem.replace(/\+/g, ' ')));
 }
 
 function fourthStep(input) {
