@@ -10,7 +10,12 @@ let server;
 const http = require('http');
 const hostname = '127.0.0.1';
 const port = 5000;
-server = http.createServer((req, res) => {});
+server = http.createServer((req, res) => {
+  console.log(`${req.method} ${req.url}`);
+  //   res.statusCode = 200;
+  //   res.setHeader('Content-Type', 'text/html');
+  //   res.end(responseBody);
+});
 
 server.listen(port, hostname, () => {
   console.log(`Successfully started the server on port 5000`);
