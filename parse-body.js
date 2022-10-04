@@ -14,14 +14,22 @@ function thirdStep(input) {
 
 function fourthStep(input) {
   // Your code here
+  return input.map(arr => arr.map(elem => decodeURIComponent(elem)));
 }
 
 function fifthStep(input) {
   // Your code here
+  const res = {};
+  for (const elem of input) {
+    const [key, val] = elem;
+    res[key] = val;
+  }
+  return res;
 }
 
 function parseBody(str) {
   // Your code here
+  return fifthStep(fourthStep(thirdStep(secondStep(firstStep(str)))));
 }
 
 /******************************************************************************/
